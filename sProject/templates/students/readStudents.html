@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta http-equiv="content-Type" content="text/html"; charset=UTF-8>
+	</head>
+	<body>
+		<p>Read Student</p>
+		
+		
+		{% if student_list %}
+		<ol>
+			{% for s in student_list %}
+			<li>
+				<a href="#none">{{s.s_name}}</a>
+				<a href="#none">수정</a>
+				<a href="#none">삭제</a>			
+			</li>
+			{% endfor %}
+		</ol>
+		{% else %}
+			<p>student: 0</p>
+		{% endif %}
+		</br>
+		<a href="#none">신규학생등록</a>
+	</body>
+</html>	
